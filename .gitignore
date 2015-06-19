@@ -1,5 +1,7 @@
 hooks/README.md
 
+node_modules/
+
 platforms/*
 !platforms/platforms.json
 
