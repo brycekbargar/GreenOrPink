@@ -1,0 +1,7 @@
+hooks/README.md
+
+platforms/*
+!platforms/platforms.json
+
+plugins/*
+!plugins/*.json
