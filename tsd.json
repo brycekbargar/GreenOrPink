@@ -1,0 +1,75 @@
+{
+  "version": "v4",
+  "repo": "borisyankov/DefinitelyTyped",
+  "ref": "master",
+  "path": "typings",
+  "bundle": "typings/tsd.d.ts",
+  "installed": {
+    "react/react.d.ts": {
+      "commit": "448c3509f1ae76930ebd2d79df23e288172f5a0a"
+    },
+    "cordova/plugins/Camera.d.ts": {
+      "commit": "448c3509f1ae76930ebd2d79df23e288172f5a0a"
+    },
+    "cordova/cordova.d.ts": {
+      "commit": "448c3509f1ae76930ebd2d79df23e288172f5a0a"
+    },
+    "cordova/plugins/BatteryStatus.d.ts": {
+      "commit": "448c3509f1ae76930ebd2d79df23e288172f5a0a"
+    },
+    "cordova/plugins/Device.d.ts": {
+      "commit": "448c3509f1ae76930ebd2d79df23e288172f5a0a"
+    },
+    "cordova/plugins/DeviceOrientation.d.ts": {
+      "commit": "448c3509f1ae76930ebd2d79df23e288172f5a0a"
+    },
+    "cordova/plugins/Contacts.d.ts": {
+      "commit": "448c3509f1ae76930ebd2d79df23e288172f5a0a"
+    },
+    "cordova/plugins/Dialogs.d.ts": {
+      "commit": "448c3509f1ae76930ebd2d79df23e288172f5a0a"
+    },
+    "cordova/plugins/DeviceMotion.d.ts": {
+      "commit": "448c3509f1ae76930ebd2d79df23e288172f5a0a"
+    },
+    "cordova/plugins/FileSystem.d.ts": {
+      "commit": "448c3509f1ae76930ebd2d79df23e288172f5a0a"
+    },
+    "cordova/plugins/FileTransfer.d.ts": {
+      "commit": "448c3509f1ae76930ebd2d79df23e288172f5a0a"
+    },
+    "cordova/plugins/Globalization.d.ts": {
+      "commit": "448c3509f1ae76930ebd2d79df23e288172f5a0a"
+    },
+    "cordova/plugins/InAppBrowser.d.ts": {
+      "commit": "448c3509f1ae76930ebd2d79df23e288172f5a0a"
+    },
+    "cordova/plugins/Media.d.ts": {
+      "commit": "448c3509f1ae76930ebd2d79df23e288172f5a0a"
+    },
+    "cordova/plugins/MediaCapture.d.ts": {
+      "commit": "448c3509f1ae76930ebd2d79df23e288172f5a0a"
+    },
+    "cordova/plugins/NetworkInformation.d.ts": {
+      "commit": "448c3509f1ae76930ebd2d79df23e288172f5a0a"
+    },
+    "cordova/plugins/Push.d.ts": {
+      "commit": "448c3509f1ae76930ebd2d79df23e288172f5a0a"
+    },
+    "cordova/plugins/Splashscreen.d.ts": {
+      "commit": "448c3509f1ae76930ebd2d79df23e288172f5a0a"
+    },
+    "cordova/plugins/StatusBar.d.ts": {
+      "commit": "448c3509f1ae76930ebd2d79df23e288172f5a0a"
+    },
+    "cordova/plugins/Vibration.d.ts": {
+      "commit": "448c3509f1ae76930ebd2d79df23e288172f5a0a"
+    },
+    "cordova/plugins/WebSQL.d.ts": {
+      "commit": "448c3509f1ae76930ebd2d79df23e288172f5a0a"
+    },
+    "flux/flux.d.ts": {
+      "commit": "448c3509f1ae76930ebd2d79df23e288172f5a0a"
+    }
+  }
+}

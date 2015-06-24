@@ -4,7 +4,8 @@
   "description": " A simple Apache Cordova application to simplify my evening commute",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "setup": "chmod +x setup && ./setup"
   },
   "repository": {
     "type": "git",
@@ -22,6 +23,11 @@
   },
   "homepage": "https://github.com/brycekbargar/greenorpink#readme",
   "devDependencies": {
-    "gulp": "^3.9.0"
+    "gulp": "^3.9.0",
+    "gulp-tsc": "^0.10.1"
+  },
+  "dependencies": {
+    "flux": "^2.0.3",
+    "react": "^0.13.3"
   }
 }

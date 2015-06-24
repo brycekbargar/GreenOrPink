@@ -1,0 +1,27 @@
+#!/bin/zsh
+#
+# Makes sure development environment is setup
+
+if ! which cordova > /dev/null; then
+  echo 'Please install cordova cli tools' >&2
+  exit 1
+fi
+
+if ! which android > /dev/null; then
+  echo 'Please install android sdk' >&2
+  exit 1
+fi
+
+if ! which tsc > /dev/null; then
+  echo 'Installing Typescript' >&2
+  npm install -g tsc
+fi
+
+if ! which tsd > /dev/null; then
+  echo 'Installing Definitely Typed' >&2
+  npm install -g tsd
+fi
+
+npm install
+tsd reinstall --overwrite
+

@@ -6,4 +6,5 @@ platforms/*
 !platforms/platforms.json
 
 plugins/*
-!plugins/*.json
+!plugins/*.jsontypings
+typings/
