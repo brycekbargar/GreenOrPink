@@ -2,14 +2,14 @@
 #
 # Makes sure development environment is setup
 
-if ! which cordova > /dev/null; then
-  echo 'Please install cordova cli tools' >&2
-  exit 1
-fi
-
 if ! which android > /dev/null; then
   echo 'Please install android sdk' >&2
   exit 1
+fi
+
+if ! which cordova > /dev/null; then
+  echo 'Installing Cordova' >&2
+  npm install -g cordova
 fi
 
 if ! which tsc > /dev/null; then
@@ -22,6 +22,7 @@ if ! which tsd > /dev/null; then
   npm install -g tsd
 fi
 
-npm install
 tsd reinstall --overwrite
 cordova platform add android
+
+exit 0

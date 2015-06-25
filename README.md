@@ -7,5 +7,8 @@
 ```
 git clone https://github.com/brycekbargar/GreenOrPink.git
 cd GreenOrPink
-npm run setup
+npm install
 ```
+
+### Running ###
+`npm start`
