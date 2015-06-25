@@ -1,10 +1,5 @@
-hooks/README.md
-
+hooks/
 node_modules/
-
-platforms/*
-!platforms/platforms.json
-
-plugins/*
-!plugins/*.jsontypings
+platforms/
+plugins/
 typings/

@@ -24,4 +24,4 @@ fi
 
 npm install
 tsd reinstall --overwrite
-
+cordova platform add android
