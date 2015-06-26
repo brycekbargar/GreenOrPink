@@ -1,0 +1,2 @@
+--compilers js:babel/register,jsx:babel/register,ts:typescript-require
+--recursive
