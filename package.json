@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "prepublish": "chmod +x setup && ./setup",
-    "test": "mocha",
+    "test": "tsc && mocha",
     "start": "cordova build && cordova emulate android"
   },
   "repository": {
@@ -31,10 +31,8 @@
     "babel": "^5.6.12",
     "chai": "^3.0.0",
     "gulp": "^3.9.0",
-    "gulp-tsc": "^0.10.1",
     "jsdom": "^3.1.2",
-    "mocha": "^2.2.5",
-    "typescript-require": "^0.2.9"
+    "mocha": "^2.2.5"
   },
   "dependencies": {
     "flux": "^2.0.3",

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Train } from '../domain/Train'
+import Train from '../domain/Train'
 
 export default class TrainDecision extends React.Component{
   render() {

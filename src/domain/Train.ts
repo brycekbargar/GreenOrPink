@@ -1,3 +1,3 @@
-export class Train {
+export default class Train {
   constructor(public line: string) { }
 }

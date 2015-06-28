@@ -4,3 +4,4 @@ platforms/
 plugins/
 typings/
 src/**/*.js
+src/**/*.js.map
