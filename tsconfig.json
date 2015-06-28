@@ -1,0 +1,41 @@
+{
+    "version": "1.5.0-alpha",
+    "compilerOptions": {
+        "target": "es5",
+        "module": "commonjs",
+        "removeComments": true,
+        "noLib": false,
+        "preserveConstEnums": true,
+        "suppressImplicitAnyIndexErrors": true
+    },
+    "filesGlob": [
+        "./**/*.ts",
+        "!./node_modules/**/*.ts"
+    ],
+    "files": [
+        "./src/domain/Train.ts",
+        "./typings/cordova/cordova.d.ts",
+        "./typings/cordova/plugins/BatteryStatus.d.ts",
+        "./typings/cordova/plugins/Camera.d.ts",
+        "./typings/cordova/plugins/Contacts.d.ts",
+        "./typings/cordova/plugins/Device.d.ts",
+        "./typings/cordova/plugins/DeviceMotion.d.ts",
+        "./typings/cordova/plugins/DeviceOrientation.d.ts",
+        "./typings/cordova/plugins/Dialogs.d.ts",
+        "./typings/cordova/plugins/FileSystem.d.ts",
+        "./typings/cordova/plugins/FileTransfer.d.ts",
+        "./typings/cordova/plugins/Globalization.d.ts",
+        "./typings/cordova/plugins/InAppBrowser.d.ts",
+        "./typings/cordova/plugins/Media.d.ts",
+        "./typings/cordova/plugins/MediaCapture.d.ts",
+        "./typings/cordova/plugins/NetworkInformation.d.ts",
+        "./typings/cordova/plugins/Push.d.ts",
+        "./typings/cordova/plugins/Splashscreen.d.ts",
+        "./typings/cordova/plugins/StatusBar.d.ts",
+        "./typings/cordova/plugins/Vibration.d.ts",
+        "./typings/cordova/plugins/WebSQL.d.ts",
+        "./typings/flux/flux.d.ts",
+        "./typings/react/react.d.ts",
+        "./typings/tsd.d.ts"
+    ]
+}

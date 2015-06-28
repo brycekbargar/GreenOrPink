@@ -4,7 +4,7 @@
   "description": " A simple Apache Cordova application to simplify my evening commute",
   "main": "index.js",
   "scripts": {
-    "preinstall": "chmod +x setup && ./setup",
+    "prepublish": "chmod +x setup && ./setup",
     "test": "mocha",
     "start": "cordova build && cordova emulate android"
   },
