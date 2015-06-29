@@ -2,6 +2,13 @@ hooks/
 node_modules/
 platforms/
 plugins/
-typings/
+typings/*
+
+# ES6 Changes
+!typings/
+!typings/eventemitter3
+!typings/eventemitter3/eventemitter3.d.ts
+
+# Build artifacts
 src/**/*.js
 src/**/*.js.map

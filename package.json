@@ -35,6 +35,7 @@
     "mocha": "^2.2.5"
   },
   "dependencies": {
+    "eventemitter3": "^1.1.1",
     "flux": "^2.0.3",
     "react": "^0.13.3"
   }
