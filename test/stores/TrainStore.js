@@ -15,7 +15,7 @@ import {
 } from '../../www/js/constants/TrainConstants';
 
 describe('TrainStore', function(){
-  beforeEach('Setup spy',function (){
+  beforeEach('Setup observer',function (){
     this.observer = spy();
     TrainStore.addObserver(this.observer);
   });
