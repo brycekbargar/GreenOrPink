@@ -9,6 +9,7 @@
         "noImplicitAny": true,
         "sourceMap": true
     },
+    "compileOnSave": false,
     "filesGlob": [
         "./**/*.ts",
         "!./node_modules/**/*.ts"
