@@ -9,7 +9,6 @@ should();
 
 describe('TrainDecision component', function(){
   before('render and locate element', function() {
-
     var renderFor = (train) => {
       var renderedComponent = TestUtils.renderIntoDocument(<TrainDecision train={train} />);
       var inputComponent = TestUtils.findRenderedDOMComponentWithTag(renderedComponent, 'div');
@@ -17,6 +16,7 @@ describe('TrainDecision component', function(){
       return inputComponent.getDOMNode();
     }
 
+    // Arrange && Act
     this.trainDecisions = {
       greenLine: renderFor(new Train('green')),
       pinkLine: renderFor(new Train('pink')),
@@ -26,6 +26,7 @@ describe('TrainDecision component', function(){
     };
   });
 
+  // Assert
   it('Renders the Green Line as green', function() {
     this.trainDecisions.greenLine.className.should.equal('green');
   });

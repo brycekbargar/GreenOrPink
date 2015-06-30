@@ -8,9 +8,9 @@ import {
 
 class TrainStore {
 
-  private emitter = new EventEmitter();
-
-  public train;
+  constructor(){
+    this.emitter = new EventEmitter();
+  }
 
   setTrain(train){
     this.train = train;
@@ -20,11 +20,11 @@ class TrainStore {
     this.emitter.emit(DECISION_MADE);
   }
 
-  addChangeListener(callback) {
+  addObserver(callback) {
     this.emitter.on(DECISION_MADE, callback);
   }
 
-  removeChangeListener(callback) {
+  removeObserver(callback) {
     this.emitter.removeListener(DECISION_MADE, callback);
   }
 }
@@ -37,8 +37,8 @@ Dispatcher.register((action) => {
     return;
   }
 
-  if (action.value instanceof Train){
-    store.setTrain(action.value);
+  if (action.train instanceof Train){
+    store.setTrain(action.train);
     store.makeDecision();
   }
 });
