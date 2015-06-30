@@ -1,8 +1,8 @@
 import React from 'react/addons';
 import { should } from 'chai';
 
-import TrainDecision from '../../src/components/TrainDecision'
-import Train from '../../src/domain/Train'
+import TrainDecision from '../../www/js/components/TrainDecision'
+import Train from '../../www/js/domain/Train'
 
 let { TestUtils } = React.addons;
 should();

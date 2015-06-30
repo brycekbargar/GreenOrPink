@@ -1,4 +1,4 @@
-/// <reference path="../../typings/tsd.d.ts"/>
+/// <reference path="../../../typings/tsd.d.ts"/>
 import EventEmitter from 'eventemitter3';
 import Dispatcher from '../dispatcher/Dispatcher';
 import * as Action from '../dispatcher/Action';

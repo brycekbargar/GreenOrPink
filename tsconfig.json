@@ -9,17 +9,11 @@
         "noImplicitAny": true,
         "sourceMap": true
     },
-    "compileOnSave": false,
     "filesGlob": [
         "./**/*.ts",
         "!./node_modules/**/*.ts"
     ],
     "files": [
-        "./src/constants/TrainConstants.ts",
-        "./src/dispatcher/Action.ts",
-        "./src/dispatcher/Dispatcher.ts",
-        "./src/domain/Train.ts",
-        "./src/stores/TrainStore.ts",
         "./typings/cordova/cordova.d.ts",
         "./typings/cordova/plugins/BatteryStatus.d.ts",
         "./typings/cordova/plugins/Camera.d.ts",
@@ -43,6 +37,11 @@
         "./typings/eventemitter3/eventemitter3.d.ts",
         "./typings/flux/flux.d.ts",
         "./typings/react/react.d.ts",
-        "./typings/tsd.d.ts"
+        "./typings/tsd.d.ts",
+        "./www/js/constants/TrainConstants.ts",
+        "./www/js/dispatcher/Action.ts",
+        "./www/js/dispatcher/Dispatcher.ts",
+        "./www/js/domain/Train.ts",
+        "./www/js/stores/TrainStore.ts"
     ]
 }

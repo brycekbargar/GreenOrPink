@@ -1,8 +1,8 @@
 import { should } from 'chai';
 should();
 
-import * as dispatcher1 from '../../src/dispatcher/Dispatcher';
-import * as dispatcher2 from '../../src/dispatcher/Dispatcher';
+import * as dispatcher1 from '../../www/js/dispatcher/Dispatcher';
+import * as dispatcher2 from '../../www/js/dispatcher/Dispatcher';
 
 describe('Dispatcher', function(){
   it('Is in singleton scope', function() {

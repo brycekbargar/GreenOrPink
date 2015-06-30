@@ -10,5 +10,5 @@ typings/*
 !typings/eventemitter3/eventemitter3.d.ts
 
 # Build artifacts
-src/**/*.js
-src/**/*.js.map
+www/**/*.js
+www/**/*.js.map
