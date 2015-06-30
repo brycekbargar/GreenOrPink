@@ -30,17 +30,17 @@ class TrainStore {
 }
 
 let store = new TrainStore();
-
-Dispatcher.register((action) => {
-
+let callback = (action) => {
   if (!action || action.action !== DECISION_MADE){
     return;
   }
-
   if (action.train instanceof Train){
     store.setTrain(action.train);
     store.makeDecision();
   }
-});
+};
+
+Dispatcher.register(callback);
 
 export default store;
+export { callback as __test_callback }
