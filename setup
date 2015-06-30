@@ -12,17 +12,6 @@ if ! which cordova > /dev/null; then
   npm install -g cordova
 fi
 
-if ! which tsc > /dev/null; then
-  echo 'Installing Typescript' >&2
-  npm install -g typescript
-fi
-
-if ! which tsd > /dev/null; then
-  echo 'Installing Definitely Typed' >&2
-  npm install -g tsd
-fi
-
-tsd reinstall --overwrite
 cordova platform add android
 
 exit 0

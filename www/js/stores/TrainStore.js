@@ -1,7 +1,5 @@
-/// <reference path="../../../typings/tsd.d.ts"/>
 import EventEmitter from 'eventemitter3';
 import Dispatcher from '../dispatcher/Dispatcher';
-import * as Action from '../dispatcher/Action';
 import Train from '../domain/Train';
 
 import {
@@ -12,9 +10,9 @@ class TrainStore {
 
   private emitter = new EventEmitter();
 
-  public train: Train;
+  public train;
 
-  setTrain(train: Train){
+  setTrain(train){
     this.train = train;
   }
 
@@ -22,25 +20,25 @@ class TrainStore {
     this.emitter.emit(DECISION_MADE);
   }
 
-  addChangeListener(callback: Function) {
-    this.emitter.on(DECISION_MADE, callback, this);
+  addChangeListener(callback) {
+    this.emitter.on(DECISION_MADE, callback);
   }
 
-  removeChangeListener(callback: Function) {
+  removeChangeListener(callback) {
     this.emitter.removeListener(DECISION_MADE, callback);
   }
 }
 
 let store = new TrainStore();
 
-Dispatcher.register((action: Action.Base) => {
+Dispatcher.register((action) => {
 
   if (!action || action.action !== DECISION_MADE){
     return;
   }
 
-  if (action instanceof Action.WithPayload && action.value instanceof Train){
-    store.setTrain(<Train>action.value);
+  if (action.value instanceof Train){
+    store.setTrain(action.value);
     store.makeDecision();
   }
 });

@@ -1,7 +1,7 @@
-# A simple(ish) Apache Cordova + React.js + Typescript app #
+# A simple(ish) Apache Cordova + React.js + ES6 application #
 
 ### Pre-requisites ###
-- A sane Cordova + Android environment
+- A sane Android environment
 
 ### Installing ###
 ```
