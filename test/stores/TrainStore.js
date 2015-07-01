@@ -53,7 +53,7 @@ describe('TrainStore', function(){
     //Assert
     this.observer.should.not.have.been.called;
   });
-  it('Does not call the Observer when the train is incorrect', function() {
+  it('Does not call the Observer when the train is not a train', function() {
     // Act
     callback({
       action: DECISION_MADE,
@@ -82,12 +82,9 @@ describe('TrainStore', function(){
     //Assert
     this.observer.should.not.have.been.called;
   });
-  it('Does not call the Observer when the train is undefined', function() {
+  it('Does not call the Observer when no message is passed', function() {
     // Act
-    callback({
-      action: DECISION_MADE,
-      train: undefined
-    });
+    callback();
 
     //Assert
     this.observer.should.not.have.been.called;
