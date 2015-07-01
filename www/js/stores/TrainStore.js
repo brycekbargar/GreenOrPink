@@ -13,7 +13,7 @@ class TrainStore {
   }
 
   setTrain(train){
-    this.train = train;
+    this.currentTrain = train;
   }
 
   makeDecision() {

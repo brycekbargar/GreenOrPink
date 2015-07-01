@@ -100,7 +100,7 @@ describe('TrainStore', function(){
     });
 
     //Assert
-    TrainStore.train.should.equal(train);
+    TrainStore.currentTrain.should.equal(train);
   });
   it('Does not call the Observer when it is unregistered', function() {
     //Arrange
