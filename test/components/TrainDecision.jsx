@@ -1,18 +1,17 @@
-import React from 'react/addons';
+import React from 'react/addons'
+let { TestUtils } = React.addons;
+
 import { should } from 'chai';
+should();
 
 import TrainDecision from '../../www/js/components/TrainDecision'
 import Train from '../../www/js/domain/Train'
-
-let { TestUtils } = React.addons;
-should();
 
 describe('TrainDecision component', function(){
   before('render and locate element', function() {
     var renderFor = (train) => {
       var renderedComponent = TestUtils.renderIntoDocument(<TrainDecision train={train} />);
       var inputComponent = TestUtils.findRenderedDOMComponentWithTag(renderedComponent, 'div');
-
       return inputComponent.getDOMNode();
     }
 

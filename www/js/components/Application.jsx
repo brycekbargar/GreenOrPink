@@ -1,30 +1,32 @@
 import React from 'react';
 
-import TrainStore from 'TrainStore'
-import TrainDecision from 'TrainDecision';
+import Train from '../domain/Train'
+import TrainStore from '../stores/TrainStore'
+import TrainDecision from './TrainDecision';
 
 export default class Application extends React.Component{
 
   constructor(...args) {
     super(...args);
     this.onChange = this.onChange.bind(this);
+    this.state = {};
   }
 
   onChange() {
-    this.SetState(TrainStore.currentTrain);
+    this.setState({train: TrainStore.currentTrain});
   }
 
   componentDidMount() {
-    TrainStore.addChangeListener(this.onChange);
+    TrainStore.addObserver(this.onChange);
   }
 
   componentWillUnmount() {
-    TrainStore.removeChangeListener(this.onChange);
+    TrainStore.removeObserver(this.onChange);
   }
 
   render() {
     return (
-      <TrainDecision train={ this.state } />
+      <TrainDecision train={ this.state.train } />
     );
   }
 };
