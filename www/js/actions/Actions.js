@@ -9,10 +9,13 @@ export default {
   makeDecision(minutesAway){
     // Fetch the possible trains from the CTA based on minutesAway
     var possibleTrains = [];
-    var bestTrain = Train.pickBestFrom(possibleTrains);
-    Dispatcher.dispatch({
-      action: DECISION_MADE,
-      train: bestTrain
-    });
+    // Will be a promise but simulate work for now
+    setTimeout(() => {
+      var bestTrain = Train.pickBestFrom(possibleTrains);
+      Dispatcher.dispatch({
+        action: DECISION_MADE,
+        train: bestTrain
+      });
+    }, 3000);
   }
 }
