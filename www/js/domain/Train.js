@@ -4,7 +4,7 @@ export default class Train {
   }
 
   static pickBestFrom(trains){
-    if(trains && trains.count > 0){
+    if(trains && trains.length > 0){
       return trains[0];
     }
     // Pink by default
