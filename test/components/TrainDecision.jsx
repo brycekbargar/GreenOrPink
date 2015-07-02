@@ -1,8 +1,7 @@
 import React from 'react/addons'
 let { TestUtils } = React.addons;
 
-import { should } from 'chai';
-should();
+import { expect } from 'chai';
 
 import TrainDecision from '../../www/js/components/TrainDecision'
 import Train from '../../www/js/domain/Train'
@@ -27,18 +26,18 @@ describe('TrainDecision component', function(){
 
   // Assert
   it('Renders the Green Line as green', function() {
-    this.trainDecisions.greenLine.className.should.equal('green');
+    expect(this.trainDecisions.greenLine.className).to.equal('green');
   });
   it('Renders the Pink Line as pink', function() {
-    this.trainDecisions.pinkLine.className.should.equal('pink');
+    expect(this.trainDecisions.pinkLine.className).to.equal('pink');
   });
   it('Renders an undefined Line as loading', function() {
-    this.trainDecisions.undefinedLine.className.should.equal('loading');
+    expect(this.trainDecisions.undefinedLine.className).to.equal('loading');
   });
   it('Renders a null Line as loading', function() {
-    this.trainDecisions.nullLine.className.should.equal('loading');
+    expect(this.trainDecisions.nullLine.className).to.equal('loading');
   });
   it('Renders a null Train as loading', function() {
-    this.trainDecisions.nullTrain.className.should.equal('loading');
+    expect(this.trainDecisions.nullTrain.className).to.equal('loading');
   });
 });

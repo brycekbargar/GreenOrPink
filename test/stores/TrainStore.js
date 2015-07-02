@@ -1,8 +1,10 @@
 import { spy } from 'sinon';
 
 import chai from 'chai';
+let expect = chai.expect;
 import sinonChai from 'sinon-chai';
-chai.should(); chai.use(sinonChai);
+chai.use(sinonChai);
+
 
 import Train from '../../www/js/domain/Train';
 import {
@@ -32,7 +34,7 @@ describe('TrainStore', function(){
     });
 
     //Assert
-    this.observer.should.have.been.calledOnce;
+    expect(this.observer).to.have.been.calledOnce;
   });
   it('Does not call the Observer when the action is incorrect', function() {
     // Act
@@ -42,7 +44,7 @@ describe('TrainStore', function(){
     });
 
     //Assert
-    this.observer.should.not.have.been.called;
+    expect(this.observer).to.not.have.been.called;
   });
   it('Does not call the Observer when the action is missing', function() {
     // Act
@@ -51,7 +53,7 @@ describe('TrainStore', function(){
     });
 
     //Assert
-    this.observer.should.not.have.been.called;
+    expect(this.observer).to.not.have.been.called;
   });
   it('Does not call the Observer when the train is not a train', function() {
     // Act
@@ -61,7 +63,7 @@ describe('TrainStore', function(){
     });
 
     //Assert
-    this.observer.should.not.have.been.called;
+    expect(this.observer).to.not.have.been.called;
   });
   it('Does not call the Observer when the train is missing', function() {
     // Act
@@ -70,7 +72,7 @@ describe('TrainStore', function(){
     });
 
     //Assert
-    this.observer.should.not.have.been.called;
+    expect(this.observer).to.not.have.been.called;
   });
   it('Does not call the Observer when the train is null', function() {
     // Act
@@ -80,14 +82,14 @@ describe('TrainStore', function(){
     });
 
     //Assert
-    this.observer.should.not.have.been.called;
+    expect(this.observer).to.not.have.been.called;
   });
   it('Does not call the Observer when no message is passed', function() {
     // Act
     callback();
 
     //Assert
-    this.observer.should.not.have.been.called;
+    expect(this.observer).to.not.have.been.called;
   });
   it('Sets the train when a decision is made', function() {
     //Arrange
@@ -100,7 +102,7 @@ describe('TrainStore', function(){
     });
 
     //Assert
-    TrainStore.currentTrain.should.equal(train);
+    expect(TrainStore.currentTrain).to.equal(train);
   });
   it('Does not call the Observer when it is unregistered', function() {
     //Arrange
@@ -113,6 +115,6 @@ describe('TrainStore', function(){
     });
 
     //Assert
-    this.observer.should.not.have.been.called;
+    expect(this.observer).to.not.have.been.called;
   });
 });
