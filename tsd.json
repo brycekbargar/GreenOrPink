@@ -7,6 +7,9 @@
   "installed": {
     "eventemitter3/eventemitter3.d.ts": {
       "commit": "ab3cc82066805007cbf0db233ddb5879f42be4d2"
+    },
+    "flux/flux.d.ts": {
+      "commit": "ab3cc82066805007cbf0db233ddb5879f42be4d2"
     }
   }
 }
