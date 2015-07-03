@@ -1,4 +1,4 @@
-import EventEmitter from 'eventemitter3';
+import EventEmitter = require('eventemitter3');
 import Dispatcher from '../dispatcher/Dispatcher';
 import Train from '../domain/Train';
 
@@ -8,11 +8,14 @@ import {
 
 class TrainStore {
 
+  private emitter: EventEmitter;
+  private currentTrain: any;
+
   constructor(){
     this.emitter = new EventEmitter();
   }
 
-  setTrain(train){
+  setTrain(train: any){
     this.currentTrain = train;
   }
 
@@ -20,17 +23,17 @@ class TrainStore {
     this.emitter.emit(DECISION_MADE);
   }
 
-  addObserver(callback) {
+  addObserver(callback: Function) {
     this.emitter.on(DECISION_MADE, callback);
   }
 
-  removeObserver(callback) {
+  removeObserver(callback: Function) {
     this.emitter.removeListener(DECISION_MADE, callback);
   }
 }
 
 let store = new TrainStore();
-let callback = (action) => {
+let callback = (action: any) => {
   if (!action || action.action !== DECISION_MADE){
     return;
   }

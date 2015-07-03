@@ -2,3 +2,7 @@ hooks/
 node_modules/
 platforms/
 plugins/
+typings/*
+
+# Build artifacts
+www/**/*.js.map
