@@ -1,5 +1,5 @@
 export default class Train {
-  constructor(public line: string) {
+  constructor(public line?: string) {
   }
 
   static pickBestFrom(trains: Train[]) : Train{

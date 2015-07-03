@@ -1,7 +1,7 @@
-import { expect } from 'chai';
+import chai = require('chai');
+let expect = chai.expect;
 
-import TrainModule from '../../www/js/domain/Train';
-let Train = TrainModule.default;
+import Train from '../../www/js/domain/Train';
 
 describe('Train', function(){
   it('Picks the first train if it exists', function() {
@@ -33,7 +33,7 @@ describe('Train', function(){
 
   it('Picks the pink line for undefined', function() {
     // Act
-    var bestTrain = Train.pickBestFrom();
+    var bestTrain = Train.pickBestFrom(undefined);
 
     // Assert
     expect(bestTrain.line).to.equal('pink');

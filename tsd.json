@@ -10,6 +10,12 @@
     },
     "flux/flux.d.ts": {
       "commit": "ab3cc82066805007cbf0db233ddb5879f42be4d2"
+    },
+    "chai/chai.d.ts": {
+      "commit": "ab3cc82066805007cbf0db233ddb5879f42be4d2"
+    },
+    "mocha/mocha.d.ts": {
+      "commit": "ab3cc82066805007cbf0db233ddb5879f42be4d2"
     }
   }
 }
