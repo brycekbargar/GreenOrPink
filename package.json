@@ -4,8 +4,8 @@
   "description": " A simple Apache Cordova application to simplify my evening commute",
   "main": "index.js",
   "scripts": {
-    "preinstall": "chmod +x setup && ./setup",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepublish": "chmod +x setup && ./setup",
+    "test": "mocha",
     "start": "cordova build && cordova emulate android"
   },
   "repository": {
@@ -15,7 +15,10 @@
   "keywords": [
     "cordova",
     "cta",
-    "android"
+    "android",
+    "es6",
+    "react",
+    "flux"
   ],
   "author": "Bryce",
   "license": "MIT",
@@ -24,10 +27,16 @@
   },
   "homepage": "https://github.com/brycekbargar/greenorpink#readme",
   "devDependencies": {
+    "babel": "^5.6.12",
+    "chai": "^3.0.0",
     "gulp": "^3.9.0",
-    "gulp-tsc": "^0.10.1"
+    "jsdom": "^3.1.2",
+    "mocha": "^2.2.5",
+    "sinon": "^1.15.4",
+    "sinon-chai": "^2.8.0"
   },
   "dependencies": {
+    "eventemitter3": "^1.1.1",
     "flux": "^2.0.3",
     "react": "^0.13.3"
   }

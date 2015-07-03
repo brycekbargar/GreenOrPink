@@ -1,0 +1,1 @@
+export const DECISION_MADE = 'TRAIN__DECISION_MADE';
