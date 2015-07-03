@@ -17,6 +17,7 @@
         "./typings/tsd.d.ts"
     ],
     "files": [
+        "./www/js/constants/TrainConstants.ts",
         "./www/js/domain/Train.ts",
         "./www/js/stores/TrainStore.ts",
         "./typings/tsd.d.ts"

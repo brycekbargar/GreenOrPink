@@ -9,7 +9,7 @@ import {
 class TrainStore {
 
   private emitter: EventEmitter;
-  private currentTrain: any;
+  private currentTrain: Train;
 
   constructor(){
     this.emitter = new EventEmitter();
