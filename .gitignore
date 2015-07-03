@@ -6,3 +6,4 @@ typings/*
 
 # Build artifacts
 www/**/*.js.map
+www/**/*.js

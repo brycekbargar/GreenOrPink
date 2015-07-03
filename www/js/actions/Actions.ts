@@ -8,7 +8,7 @@ import {
 export default {
   makeDecision(){
     // Fetch the possible trains from the CTA based on minutes away from clark/lake
-    var possibleTrains = [];
+    var possibleTrains: Train[] = [];
 
     // Will be a promise but simulate work for now
     setTimeout(() => {
