@@ -1,15 +1,15 @@
 import React from 'react';
 import Application from './components/Application';
-import Action from './actions/Action'
+import Actions from './actions/Actions'
 
 class app {
   load(){
     React.render(<Application />, document.getElementById('app'));
-    Action.makeDecision();
+    Actions.makeDecision();
   }
   reload(){
-    Action.makeDecision();
+    Actions.makeDecision();
   }
 }
 
-export default new App();
+export default new app();
