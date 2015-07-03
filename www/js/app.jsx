@@ -1,6 +1,7 @@
 import React from 'react';
 import Application from './components/Application';
-import Actions from './actions/Actions'
+import ActionsModule from './actions/Actions'
+let Actions = ActionsModule.default;
 
 class app {
   load(){

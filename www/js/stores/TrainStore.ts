@@ -15,19 +15,19 @@ class TrainStore {
     this.emitter = new EventEmitter();
   }
 
-  setTrain(train: any){
+  public setTrain(train: any){
     this.currentTrain = train;
   }
 
-  makeDecision() {
+  public makeDecision() {
     this.emitter.emit(DECISION_MADE);
   }
 
-  addObserver(callback: Function) {
+  public addObserver(callback: Function) {
     this.emitter.on(DECISION_MADE, callback);
   }
 
-  removeObserver(callback: Function) {
+  public removeObserver(callback: Function) {
     this.emitter.removeListener(DECISION_MADE, callback);
   }
 }

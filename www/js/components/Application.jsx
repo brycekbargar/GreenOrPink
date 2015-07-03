@@ -1,8 +1,11 @@
 import React from 'react';
 
-import Train from '../domain/Train'
-import TrainStore from '../stores/TrainStore'
 import TrainDecision from './TrainDecision';
+
+import TrainModule from '../domain/Train'
+import TrainStoreModule from '../stores/TrainStore'
+let Train = TrainModule.default;
+let TrainStore = TrainStoreModule.default;
 
 export default class Application extends React.Component{
 

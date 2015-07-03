@@ -4,7 +4,8 @@ let { TestUtils } = React.addons;
 import { expect } from 'chai';
 
 import TrainDecision from '../../www/js/components/TrainDecision'
-import Train from '../../www/js/domain/Train'
+import TrainModule from '../../www/js/domain/Train';
+let Train = TrainModule.default;
 
 describe('TrainDecision component', function(){
   before('render and locate element', function() {

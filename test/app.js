@@ -8,7 +8,8 @@ chai.use(sinonChai);
 import React from 'react';
 
 import Application from '../www/js/components/Application'
-import Actions from '../www/js/actions/Actions';
+import ActionsModule from '../www/js/actions/Actions';
+let Actions = ActionsModule.default;
 import app from '../www/js/app';
 
 describe('app', function(){

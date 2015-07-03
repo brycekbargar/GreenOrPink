@@ -1,6 +1,7 @@
 import { expect } from 'chai';
 
-import Train from '../../www/js/domain/Train';
+import TrainModule from '../../www/js/domain/Train';
+let Train = TrainModule.default;
 
 describe('Train', function(){
   it('Picks the first train if it exists', function() {

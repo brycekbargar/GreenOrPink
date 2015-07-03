@@ -5,12 +5,11 @@ let expect = chai.expect;
 import sinonChai from 'sinon-chai';
 chai.use(sinonChai);
 
-
-import Train from '../../www/js/domain/Train';
-import {
-  default as TrainStore,
-  __test_callback as callback
-} from '../../www/js/stores/TrainStore';
+import TrainModule from '../../www/js/domain/Train';
+import TrainStoreModule from '../../www/js/stores/TrainStore';
+let Train = TrainModule.default;
+let TrainStore = TrainStoreModule.default;
+let callback = TrainStoreModule.__test_callback;
 
 import {
   DECISION_MADE
