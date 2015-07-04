@@ -9,14 +9,18 @@ import {
 class TrainStore {
 
   private emitter: EventEmitter;
-  private currentTrain: Train;
+
+  private _currentTrain: Train;
+  get currentTrain():Train {
+    return this._currentTrain;
+  }
 
   constructor(){
     this.emitter = new EventEmitter();
   }
 
   public setTrain(train: any){
-    this.currentTrain = train;
+    this._currentTrain = train;
   }
 
   public makeDecision() {
@@ -33,7 +37,7 @@ class TrainStore {
 }
 
 let store = new TrainStore();
-let callback = (action: any) => {
+let callback = (action?: any) => {
   if (!action || action.action !== DECISION_MADE){
     return;
   }

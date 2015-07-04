@@ -1,27 +1,28 @@
-import { spy } from 'sinon';
+import sinon = require('sinon');
+let spy = sinon.spy;
 
-import chai from 'chai';
+import chai = require('chai');
 let expect = chai.expect;
-import sinonChai from 'sinon-chai';
+import sinonChai = require('sinon-chai');
 chai.use(sinonChai);
 
-import TrainModule from '../../www/js/domain/Train';
-import TrainStoreModule from '../../www/js/stores/TrainStore';
-let Train = TrainModule.default;
-let TrainStore = TrainStoreModule.default;
-let callback = TrainStoreModule.__test_callback;
+import Train from '../../www/js/domain/Train';
+import {
+  default as TrainStore,
+  __test_callback as callback
+  } from '../../www/js/stores/TrainStore';
 
 import {
   DECISION_MADE
 } from '../../www/js/constants/TrainConstants';
 
 describe('TrainStore', function(){
-  beforeEach('Setup observer',function (){
+  beforeEach(function (){
     // Arrange
     this.observer = spy();
     TrainStore.addObserver(this.observer);
   });
-  afterEach('Teardown observer', function (){
+  afterEach(function (){
     TrainStore.removeObserver(this.observer);
   })
 

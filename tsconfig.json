@@ -29,6 +29,7 @@
         "./platforms/android/build/intermediates/assets/debug/www/js/stores/TrainStore.ts",
         "./test/dispatcher/Dispatcher.ts",
         "./test/domain/Train.ts",
+        "./test/stores/TrainStore.ts",
         "./www/js/actions/Actions.ts",
         "./www/js/constants/TrainConstants.ts",
         "./www/js/dispatcher/Dispatcher.ts",

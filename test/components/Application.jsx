@@ -73,7 +73,7 @@ describe('Application', function(){
     // Act
     var train = new Train();
 
-    TrainStore.currentTrain = train;
+    TrainStore.setTrain(train);
     this.onChange();
 
     // Assert
