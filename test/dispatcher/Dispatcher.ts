@@ -1,4 +1,5 @@
-import { expect } from 'chai';
+import chai = require('chai');
+let expect = chai.expect;
 
 // Arrange
 import * as dispatcher1 from '../../www/js/dispatcher/Dispatcher';
