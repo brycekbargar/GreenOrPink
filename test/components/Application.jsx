@@ -11,8 +11,11 @@ chai.use(sinonChai);
 
 import Application from '../../www/js/components/Application'
 import TrainDecision from '../../www/js/components/TrainDecision'
-import TrainStore from '../../www/js/stores/TrainStore'
-import Train from '../../www/js/domain/Train'
+
+import TrainStoreModule from '../../www/js/stores/TrainStore'
+import TrainModule from '../../www/js/domain/Train';
+let TrainStore = TrainStoreModule.default;
+let Train = TrainModule.default;
 
 describe('Application', function(){
 
@@ -70,7 +73,7 @@ describe('Application', function(){
     // Act
     var train = new Train();
 
-    TrainStore.currentTrain = train;
+    TrainStore.setTrain(train);
     this.onChange();
 
     // Assert

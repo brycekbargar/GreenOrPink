@@ -1,9 +1,8 @@
 export default class Train {
-  constructor(line) {
-    this.line = line;
+  constructor(public line?: string) {
   }
 
-  static pickBestFrom(trains){
+  static pickBestFrom(trains: Train[]) : Train{
     if(trains && trains.length > 0){
       return trains[0];
     }

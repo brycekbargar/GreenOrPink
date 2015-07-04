@@ -2,3 +2,11 @@ hooks/
 node_modules/
 platforms/
 plugins/
+typings/*
+
+# Build artifacts
+test/**/*.js
+test/**/*.js.map
+www/**/*.js.map
+www/**/*.js
+!www/js/index.js

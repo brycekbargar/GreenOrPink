@@ -1,5 +1,6 @@
 import React from 'react';
-import Train from '../domain/Train';
+import TrainModule from '../domain/Train';
+let Train = TrainModule.default;
 
 export default class TrainDecision extends React.Component{
   render() {

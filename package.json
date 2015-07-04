@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "prepublish": "chmod +x setup && ./setup",
-    "test": "mocha",
+    "test": "tsc && mocha",
     "start": "cordova build && cordova emulate android"
   },
   "repository": {

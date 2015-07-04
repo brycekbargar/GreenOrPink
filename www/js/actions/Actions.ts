@@ -1,22 +1,17 @@
 import Dispatcher from '../dispatcher/Dispatcher';
 import Train from '../domain/Train';
 
-import {
-  DECISION_MADE
-} from '../constants/TrainConstants';
+import DecisionMadeMessage from '../messages/DecisionMadeMessage';
 
 export default {
   makeDecision(){
     // Fetch the possible trains from the CTA based on minutes away from clark/lake
-    var possibleTrains = [];
-    
+    var possibleTrains: Train[] = [];
+
     // Will be a promise but simulate work for now
     setTimeout(() => {
       var bestTrain = Train.pickBestFrom(possibleTrains);
-      Dispatcher.dispatch({
-        action: DECISION_MADE,
-        train: bestTrain
-      });
+      Dispatcher.dispatch(new DecisionMadeMessage(bestTrain));
     }, 3000);
   }
 }

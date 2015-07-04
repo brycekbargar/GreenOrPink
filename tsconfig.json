@@ -1,0 +1,32 @@
+{
+    "version": "1.5.0-alpha",
+    "compilerOptions": {
+        "target": "es5",
+        "module": "commonjs",
+        "removeComments": true,
+        "noLib": false,
+        "preserveConstEnums": true,
+        "suppressImplicitAnyIndexErrors": true,
+        "noImplicitAny": true,
+        "sourceMap": true
+    },
+    "filesGlob": [
+        "./**/*.ts",
+        "!./platforms/**/*.ts",
+        "!./node_modules/**/*.ts",
+        "!./typings/**/*.d.ts",
+        "./typings/tsd.d.ts"
+    ],
+    "files": [
+        "./test/dispatcher/Dispatcher.ts",
+        "./test/domain/Train.ts",
+        "./test/stores/TrainStore.ts",
+        "./www/js/actions/Actions.ts",
+        "./www/js/dispatcher/Dispatcher.ts",
+        "./www/js/domain/Train.ts",
+        "./www/js/messages/DecisionMadeMessage.ts",
+        "./www/js/messages/Message.ts",
+        "./www/js/stores/TrainStore.ts",
+        "./typings/tsd.d.ts"
+    ]
+}
