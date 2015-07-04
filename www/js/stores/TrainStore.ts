@@ -2,9 +2,8 @@ import EventEmitter = require('eventemitter3');
 import Dispatcher from '../dispatcher/Dispatcher';
 import Train from '../domain/Train';
 
-import {
-  DECISION_MADE
-} from '../constants/TrainConstants';
+import Message from '../messages/Message';
+import DecisionMadeMessage from '../messages/DecisionMadeMessage';
 
 class TrainStore {
 
@@ -24,26 +23,23 @@ class TrainStore {
   }
 
   public makeDecision() {
-    this.emitter.emit(DECISION_MADE);
+    this.emitter.emit(DecisionMadeMessage.action);
   }
 
   public addObserver(callback: Function) {
-    this.emitter.on(DECISION_MADE, callback);
+    this.emitter.on(DecisionMadeMessage.action, callback);
   }
 
   public removeObserver(callback: Function) {
-    this.emitter.removeListener(DECISION_MADE, callback);
+    this.emitter.removeListener(DecisionMadeMessage.action, callback);
   }
 }
 
 let store = new TrainStore();
-let callback = (action?: any) => {
-  if (!action || action.action !== DECISION_MADE){
-    return;
-  }
-  if (action.train instanceof Train){
-    store.setTrain(action.train);
-    store.makeDecision();
+let callback = (message?: Message) => {
+  if (message instanceof DecisionMadeMessage && message.train){
+      store.setTrain(message.train);
+      store.makeDecision();
   }
 };
 

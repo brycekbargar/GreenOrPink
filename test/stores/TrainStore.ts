@@ -12,9 +12,8 @@ import {
   __test_callback as callback
   } from '../../www/js/stores/TrainStore';
 
-import {
-  DECISION_MADE
-} from '../../www/js/constants/TrainConstants';
+import Message from '../../www/js/messages/Message'
+import DecisionMadeMessage from '../../www/js/messages/DecisionMadeMessage'
 
 describe('TrainStore', function(){
   beforeEach(function (){
@@ -28,58 +27,30 @@ describe('TrainStore', function(){
 
   it('Calls the Observer when it is registered', function() {
     // Act
-    callback({
-      action: DECISION_MADE,
-      train: new Train()
-    });
+    callback(new DecisionMadeMessage(new Train()));
 
     //Assert
     expect(this.observer).to.have.been.calledOnce;
   });
+
   it('Does not call the Observer when the action is incorrect', function() {
     // Act
-    callback({
-      action: 'BAD_ACTION',
-      train: new Train()
-    });
+    callback(<Message>{});
 
     //Assert
     expect(this.observer).to.not.have.been.called;
   });
-  it('Does not call the Observer when the action is missing', function() {
-    // Act
-    callback({
-      train: new Train()
-    });
 
-    //Assert
-    expect(this.observer).to.not.have.been.called;
-  });
-  it('Does not call the Observer when the train is not a train', function() {
+  it('Does not call the Observer when the train is udefined', function() {
     // Act
-    callback({
-      action: DECISION_MADE,
-      train: new Array()
-    });
-
-    //Assert
-    expect(this.observer).to.not.have.been.called;
-  });
-  it('Does not call the Observer when the train is missing', function() {
-    // Act
-    callback({
-      action: DECISION_MADE
-    });
+    callback(new DecisionMadeMessage(undefined));
 
     //Assert
     expect(this.observer).to.not.have.been.called;
   });
   it('Does not call the Observer when the train is null', function() {
     // Act
-    callback({
-      action: DECISION_MADE,
-      train: null
-    });
+    callback(new DecisionMadeMessage(null));
 
     //Assert
     expect(this.observer).to.not.have.been.called;
@@ -96,10 +67,7 @@ describe('TrainStore', function(){
     var train = new Train();
 
     // Act
-    callback({
-      action: DECISION_MADE,
-      train: train
-    });
+    callback(new DecisionMadeMessage(train));
 
     //Assert
     expect(TrainStore.currentTrain).to.equal(train);
@@ -109,10 +77,7 @@ describe('TrainStore', function(){
     TrainStore.removeObserver(this.observer);
 
     // Act
-    callback({
-      action: DECISION_MADE,
-      train: new Train()
-    });
+    callback(new DecisionMadeMessage(new Train()));
 
     //Assert
     expect(this.observer).to.not.have.been.called;

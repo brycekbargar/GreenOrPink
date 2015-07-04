@@ -12,28 +12,20 @@
     },
     "filesGlob": [
         "./**/*.ts",
+        "!./platforms/**/*.ts",
         "!./node_modules/**/*.ts",
         "!./typings/**/*.d.ts",
         "./typings/tsd.d.ts"
     ],
     "files": [
-        "./platforms/android/assets/www/js/actions/Actions.ts",
-        "./platforms/android/assets/www/js/constants/TrainConstants.ts",
-        "./platforms/android/assets/www/js/dispatcher/Dispatcher.ts",
-        "./platforms/android/assets/www/js/domain/Train.ts",
-        "./platforms/android/assets/www/js/stores/TrainStore.ts",
-        "./platforms/android/build/intermediates/assets/debug/www/js/actions/Actions.ts",
-        "./platforms/android/build/intermediates/assets/debug/www/js/constants/TrainConstants.ts",
-        "./platforms/android/build/intermediates/assets/debug/www/js/dispatcher/Dispatcher.ts",
-        "./platforms/android/build/intermediates/assets/debug/www/js/domain/Train.ts",
-        "./platforms/android/build/intermediates/assets/debug/www/js/stores/TrainStore.ts",
         "./test/dispatcher/Dispatcher.ts",
         "./test/domain/Train.ts",
         "./test/stores/TrainStore.ts",
         "./www/js/actions/Actions.ts",
-        "./www/js/constants/TrainConstants.ts",
         "./www/js/dispatcher/Dispatcher.ts",
         "./www/js/domain/Train.ts",
+        "./www/js/messages/DecisionMadeMessage.ts",
+        "./www/js/messages/Message.ts",
         "./www/js/stores/TrainStore.ts",
         "./typings/tsd.d.ts"
     ]

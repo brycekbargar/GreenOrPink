@@ -1,3 +1,5 @@
 import flux = require('flux');
 
-export default new flux.Dispatcher();
+import Message from '../messages/Message';
+
+export default new flux.Dispatcher<Message>();

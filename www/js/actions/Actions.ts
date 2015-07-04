@@ -1,9 +1,7 @@
 import Dispatcher from '../dispatcher/Dispatcher';
 import Train from '../domain/Train';
 
-import {
-  DECISION_MADE
-} from '../constants/TrainConstants';
+import DecisionMadeMessage from '../messages/DecisionMadeMessage';
 
 export default {
   makeDecision(){
@@ -13,10 +11,7 @@ export default {
     // Will be a promise but simulate work for now
     setTimeout(() => {
       var bestTrain = Train.pickBestFrom(possibleTrains);
-      Dispatcher.dispatch({
-        action: DECISION_MADE,
-        train: bestTrain
-      });
+      Dispatcher.dispatch(new DecisionMadeMessage(bestTrain));
     }, 3000);
   }
 }
