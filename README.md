@@ -1,4 +1,4 @@
-# A simple(ish) Apache Cordova + React.js + ES6 application #
+# A simple(ish) Apache Cordova + React.js + Typescript application #
 
 ### Pre-requisites ###
 - A sane Android environment
