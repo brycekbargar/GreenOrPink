@@ -4,26 +4,11 @@
 
 if ! which android > /dev/null; then
   echo 'Please install android sdk' >&2
-  exit 1
 fi
 
-if ! which cordova > /dev/null; then
-  echo 'Installing Cordova' >&2
-  npm install -g cordova
-fi
+./node_modules/.bin/tsd reinstall --overwrite
+./node_modules/.bin/cordova platform add android
 
-if ! which tsc > /dev/null; then
-  echo 'Installing Typescript' >&2
-  npm install -g typescript
-fi
-
-if ! which tsd > /dev/null; then
-  echo 'Installing Definitely Typed' >&2
-  npm install -g tsd
-fi
-
-tsd reinstall --overwrite
-
-cordova platform add android
+chmod +x ./env
 
 exit 0
