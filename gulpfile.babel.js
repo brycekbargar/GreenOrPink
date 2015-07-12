@@ -1,9 +1,11 @@
 import gulp from 'gulp';
 import sequence from 'run-sequence';
 import clean from 'del';
+import tsc from 'tsproject';
 
 gulp.task('default', cb => sequence(
   'clean',
+  'build',
   cb));
 
 gulp.task('clean', cb => sequence(
@@ -13,3 +15,9 @@ gulp.task('clean', cb => sequence(
 
 gulp.task('clean::src', cb => clean(['www/**/*.js', 'www/**/*.js.map'], cb));
 gulp.task('clean::test', cb => clean(['test/**/*.js', 'www/**/*.js.map'], cb));
+
+gulp.task('build', cb => sequence(
+  [ 'build::tsc' ],
+  cb));
+
+gulp.task('build::tsc', cb => tsc.src('./tsconfig.json').pipe(gulp.dest('./')));
