@@ -1,2 +1,2 @@
---compilers js:babel/register,jsx:babel/register
+--compilers es6:babel/register,jsx:babel/register
 --recursive
