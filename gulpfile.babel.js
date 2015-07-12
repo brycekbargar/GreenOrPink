@@ -2,11 +2,21 @@ import gulp from 'gulp';
 import sequence from 'run-sequence';
 import clean from 'del';
 import tsc from 'tsproject';
+import shell from 'gulp-shell';
 
 gulp.task('default', cb => sequence(
-  'clean',
-  'build',
+  'rebuild',
   cb));
+
+  gulp.task('test', cb => sequence(
+    'rebuild',
+    'mocha',
+    cb));
+
+gulp.task('rebuild', cb => sequence(
+    'clean',
+    'build',
+    cb));
 
 gulp.task('clean', cb => sequence(
   [ 'clean::src',
@@ -20,4 +30,6 @@ gulp.task('build', cb => sequence(
   [ 'build::tsc' ],
   cb));
 
-gulp.task('build::tsc', cb => tsc.src('./tsconfig.json').pipe(gulp.dest('./')));
+gulp.task('build::tsc', () => tsc.src('./tsconfig.json').pipe(gulp.dest('./')));
+
+gulp.task('mocha', shell.task('mocha'));

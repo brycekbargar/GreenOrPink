@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "postinstall": "chmod +x setup && ./setup",
-    "test": "./env && tsc && mocha",
+    "test": "./env && gulp test",
     "start": "./env && cordova build && cordova emulate android"
   },
   "repository": {
@@ -33,6 +33,7 @@
     "cordova": "^5.1.1",
     "del": "^1.2.0",
     "gulp": "^3.9.0",
+    "gulp-shell": "^0.4.2",
     "jsdom": "^3.1.2",
     "mocha": "^2.2.5",
     "run-sequence": "^1.1.1",
