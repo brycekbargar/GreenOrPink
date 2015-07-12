@@ -4,9 +4,9 @@
   "description": " A simple Apache Cordova application to simplify my evening commute",
   "main": "index.js",
   "scripts": {
-    "postinstall": "chmod +x setup && ./setup",
-    "test": "./env && gulp test",
-    "start": "./env && cordova build && cordova emulate android"
+    "postinstall": "tsd reinstall --overwrite && cordova platform add android || true",
+    "test": "gulp test",
+    "start": "cordova build && cordova emulate android"
   },
   "repository": {
     "type": "git",
