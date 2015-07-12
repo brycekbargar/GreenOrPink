@@ -1,4 +1,5 @@
 # A simple(ish) Apache Cordova + React.js + Typescript application #
+https://travis-ci.org/brycekbargar/GreenOrPink.svg?branch=make-a-build-process
 
 ### Pre-requisites ###
 - A sane Android environment
