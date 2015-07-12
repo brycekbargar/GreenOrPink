@@ -30,6 +30,6 @@ gulp.task('build', cb => sequence(
   [ 'build::tsc' ],
   cb));
 
-gulp.task('build::tsc', () => tsc.src('./tsconfig.json').pipe(gulp.dest('./')));
+gulp.task('build::tsc', shell.task('tsc'));
 
 gulp.task('mocha', shell.task('mocha'));
