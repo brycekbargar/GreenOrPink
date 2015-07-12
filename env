@@ -1,5 +1,0 @@
-#!/bin/zsh
-#
-# Ensures that non-global bin commands are available
-
-PATH=$(npm bin):$HOME/npm/bin:$PATH
