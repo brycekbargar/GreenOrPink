@@ -1,4 +1,4 @@
-import Train from '../Domain/Train';
+import Train from '../domain/Train';
 import Message from './Message';
 
 export default class DecisionMadeMessage implements Message{
