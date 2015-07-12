@@ -1,7 +1,7 @@
 import gulp from 'gulp';
 import sequence from 'run-sequence';
 import clean from 'del';
-import tsc from 'tsproject';
+import tsc from 'TsProject';
 import shell from 'gulp-shell';
 
 gulp.task('default', cb => sequence(
