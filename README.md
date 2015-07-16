@@ -1,7 +1,7 @@
 # A simple(ish) Apache Cordova + React.js + Typescript application #
 [![Build Status](https://travis-ci.org/brycekbargar/GreenOrPink.svg?branch=master)](https://travis-ci.org/brycekbargar/GreenOrPink)
 
-I've officially EOF'd this.
+I've officially EOL'd this.
 - I learned what I wanted out of it (React + Travis CI + ES6 + JS Testing)
 - I changed jobs and have no commute!
 - I really have no interest in Cordova...
