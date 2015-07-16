@@ -1,0 +1,10 @@
+language: node_js
+node_js:
+  - "0.12"
+before_install:
+  - npm install -g gulp
+  - npm install -g typescript
+  - npm install -g mocha
+  - npm install -g babel
+  - npm install -g cordova
+  - npm install -g tsd
